@@ -4,6 +4,8 @@ package-lock.json
 */package-lock.json
 node_modules/
 node_modules/*
-
-googleapp.ipynb
-*/googleapp.ipynb
+*.ipynb
+tempCodeRunnerFile.js
+*/tempCodeRunnerFile.js
+test.js
+*/test.js
