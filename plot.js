@@ -3,13 +3,13 @@ Google Play Store Data Dashboard using Plotly.js
 dataset: https://www.kaggle.com/datasets/lava18/google-play-store-apps
 */
 
+// read csv
 function createPlot() {
 
   Plotly.d3.csv("googleplaystore_fix.csv", function(data){ 
     processData(data) 
   } );
 };
- 
 function processData(allRows) {
 
   // console.log(allRows);
