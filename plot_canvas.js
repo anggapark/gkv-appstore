@@ -71,6 +71,12 @@ const sketch = () => {
     }
     context.restore();
 
+    context.save();
+    context.font = `50px Consolas`;
+    context.fillStyle = "#373737";
+    context.fillText("Google Play Store Dashboard",600,65);
+    context.restore();
+
     // Data 2
     context.beginPath();
     context.moveTo(100,600);
