@@ -87,6 +87,7 @@ function makePlotly( cat_count, type_prop, cr_count, rate_count ){
         order: 'ascending'
       }]
   };
+
   // type
   var trace2 = { 
       labels: Object.keys(type_prop),
