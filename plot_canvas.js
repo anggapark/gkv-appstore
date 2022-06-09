@@ -7,7 +7,7 @@ const settings = {
 const sketch = () => {
   return ({ context, width, height }) => {
 
-    context.fillStyle = 'white';
+    context.fillStyle = "#E5EECE";
     context.fillRect(0, 0, width, height);
 
     var data1 = [["Unrated",7414], ["Teen",1084], ["Mature 17+",461], ["Everyone 10+",397], ["Adults Only 18+",3], ["Unrated 10+",1]];
@@ -26,7 +26,7 @@ const sketch = () => {
 
     // Judul
     context.save();
-    context.font = `50px Arial`;
+    context.font = `50px Consolas`;
     context.fillStyle = "#373737";
     context.fillText("Google Play Store Dashboard",600,65);
     context.restore();
@@ -40,14 +40,18 @@ const sketch = () => {
     context.closePath();
 
     context.save();
+    context.font = `35px serif`;
+    context.fillStyle = "#373737";
+    context.fillText("Number of Apps by Content Rating",350,200);
+    context.restore();
+
+    context.save();
+    context.fillStyle = 'blue';
     context.translate(0, height);
     context.scale(1, -1);  
-    context.beginPath();
-    context.strokeStyle = "#1dd5f6";
     context.lineWidth = 3;
     for (var i = 0; i < data1.length; i++) {
-      context.strokeRect(120*(i+1),1101, 60, data1[i][1]/30);
-      context.closePath();
+      context.fillRect(120*(i+1),1101, 60, data1[i][1]/30);
     }
     context.restore();
 
@@ -76,14 +80,18 @@ const sketch = () => {
     context.closePath();
 
     context.save();
+    context.font = `35px serif`;
+    context.fillStyle = "#373737";
+    context.fillText("Number of Apps Category",350,675);
+    context.restore();
+
+    context.save();
+    context.fillStyle = 'blue';
     context.translate(0, height);
     context.scale(1, -1);  
-    context.beginPath();
-    context.strokeStyle = "#1dd5f6";
     context.lineWidth = 3;
     for (var i = 0; i < 10; i++) {
-      context.strokeRect(120*(i+1),601, 60, data3[i][1]/7);
-      context.closePath();
+      context.fillRect(120*(i+1),601, 60, data3[i][1]/7);
     }
     context.restore();
 
@@ -112,14 +120,18 @@ const sketch = () => {
     context.closePath();
 
     context.save();
+    context.font = `35px serif`;
+    context.fillStyle = "#373737";
+    context.fillText("Rating Category for each App",350,1175);
+    context.restore();
+
+    context.save();
+    context.fillStyle = 'blue';
     context.translate(0, height);
     context.scale(1, -1);  
-    context.beginPath();
-    context.strokeStyle = "#1dd5f6";
     context.lineWidth = 3;
     for (var i = 0; i < 4; i++) {
-      context.strokeRect(120*(i+1),101, 60, data4[i][1]/30);
-      context.closePath();
+      context.fillRect(120*(i+1),101, 60, data4[i][1]/30);
     }
     context.restore();
 
@@ -141,11 +153,16 @@ const sketch = () => {
 
     // Data 4
     
+    context.save();
+    context.font = `35px serif`;
+    context.fillStyle = "#373737";
+    context.fillText("Paid or Free",1425,825);
+    context.restore();
+    
     var data2_tot = data2[0][1] + data2[1][1];
     var start = 0;
     var center_x = 1500, center_y = 400;
       
-    
     context.save();
     for (var i = 0; i < 2; i++) {
       if(data2[i][0] = "Free") {
