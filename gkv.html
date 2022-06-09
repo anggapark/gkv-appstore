@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        const labels = [
+  'Everyone',
+  'Teen',
+  'Mature 17+',
+  'Everyone 10+',
+  'Adults Only 18+',
+  'Unrated',
+];
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Rate the Apps Category',
+    backgroundColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(255, 99, 132)',
+    data: [8710, 1208, 499, 414, 3, 2],
+  }]
+};
+        const config = {
+        type: 'bar',
+        data: data,
+        options: {}
+        };
+
+        const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+    </script>
+</body>
+</html>
