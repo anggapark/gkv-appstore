@@ -74,7 +74,7 @@ const sketch = () => {
     context.save();
     context.font = `50px Consolas`;
     context.fillStyle = "#373737";
-    context.fillText("Google Play Store Dashboard",600,65);
+    context.fillText("Apps Content Rating",600,65);
     context.restore();
 
     // Data 2
