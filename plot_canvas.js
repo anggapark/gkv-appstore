@@ -71,11 +71,6 @@ const sketch = () => {
     }
     context.restore();
 
-    context.save();
-    context.font = `50px Consolas`;
-    context.fillStyle = "#373737";
-    context.fillText("Apps Content Rating",600,65);
-    context.restore();
 
     // Data 2
     context.beginPath();
