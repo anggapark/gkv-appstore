@@ -10,20 +10,28 @@ const sketch = () => {
     context.fillStyle = "#E5EECE";
     context.fillRect(0, 0, width, height);
 
-    var data1 = [["Unrated",7414], ["Teen",1084], ["Mature 17+",461], ["Everyone 10+",397], ["Adults Only 18+",3], ["Unrated 10+",1]];
+    var data1 = [["Unrated",7414], 
+                 ["Teen",1084], 
+                 ["Mature 17+",461], 
+                 ["Everyone 10+",397], 
+                 ["Adults Only 18+",3], 
+                 ["Unrated 10+",1]];
     var data2 = [["Free", 8715],["Paid",645]];
     // Top 10 most catagories
     var data3 = [["Family",1746],
-                  ["Game",1097],
-                  ["Tools",733],
-                  ["Productivity",351],
-                  ["Medical",350],
-                  ["Communication",328],
-                  ["Finance",323],
-                  ["Sports",319],
-                  ["Photography",317],
-                  ["Lifestyle",314],];
-    var data4 = [["5-4",6796], ["3-4", 2194], ["2-3", 302], ["1-2", 68]];
+                 ["Game",1097],
+                 ["Tools",733],
+                 ["Productivity",351],
+                 ["Medical",350],
+                 ["Communication",328],
+                 ["Finance",323],
+                 ["Sports",319],
+                 ["Photography",317],
+                 ["Lifestyle",314],];
+    var data4 = [["5-4",6796], 
+                 ["3-4", 2194], 
+                 ["2-3", 302], 
+                 ["1-2", 68]];
 
     // Judul
     context.save();
@@ -90,7 +98,6 @@ const sketch = () => {
     context.fillStyle = 'blue';
     context.translate(0, height);
     context.scale(1, -1);  
-    context.lineWidth = 3;
     for (var i = 0; i < 10; i++) {
       context.fillRect(120*(i+1),601, 60, data3[i][1]/7);
     }
@@ -112,6 +119,7 @@ const sketch = () => {
     }
     context.restore();
 
+    
     // Data 3
     context.beginPath();
     context.moveTo(100,1100);
@@ -130,7 +138,6 @@ const sketch = () => {
     context.fillStyle = 'blue';
     context.translate(0, height);
     context.scale(1, -1);  
-    context.lineWidth = 3;
     for (var i = 0; i < 4; i++) {
       context.fillRect(120*(i+1),101, 60, data4[i][1]/30);
     }
