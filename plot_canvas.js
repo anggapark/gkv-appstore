@@ -12,16 +12,17 @@ const sketch = () => {
 
     var data1 = [["Unrated",7414], ["Teen",1084], ["Mature 17+",461], ["Everyone 10+",397], ["Adults Only 18+",3], ["Unrated 10+",1]];
     var data2 = [["Free", 8715],["Paid",645]];
+    // Top 10 most catagories
     var data3 = [["Family",1746],
-                 ["Tools",733],
-                 ["Medical",350],
-                 ["Finance",323],
-                 ["Photography",317],
-                 ["Personalization",312],
-                 ["Health and Fitness",297],
-                 ["Shopping",238],
-                 ["Travel and Local",226],
-                 ["Books and Reference",178],];
+                  ["Game",1097],
+                  ["Tools",733],
+                  ["Productivity",351],
+                  ["Medical",350],
+                  ["Communication",328],
+                  ["Finance",323],
+                  ["Sports",319],
+                  ["Photography",317],
+                  ["Lifestyle",314],];
     var data4 = [["5-4",6796], ["3-4", 2194], ["2-3", 302], ["1-2", 68]];
 
     // Judul
@@ -48,8 +49,7 @@ const sketch = () => {
     context.save();
     context.fillStyle = 'blue';
     context.translate(0, height);
-    context.scale(1, -1);  
-    context.lineWidth = 3;
+    context.scale(1, -1);
     for (var i = 0; i < data1.length; i++) {
       context.fillRect(120*(i+1),1101, 60, data1[i][1]/30);
     }
@@ -170,7 +170,7 @@ const sketch = () => {
         context.fillStyle = '#f45467';
         var sudut = data2[0][1]/data2_tot*2*Math.PI;
         context.beginPath();
-        context.arc(1500, 400, 250, start, sudut, false);
+        context.arc(center_x, center_y, 250, start, sudut, false);
         context.lineTo(center_x,center_y);
         context.fill();
       
@@ -182,7 +182,7 @@ const sketch = () => {
         var sudut = 2*Math.PI;
         var persen_data2 = data2[1][1]/data2_tot*100;
         context.beginPath();
-        context.arc(1500, 400, 250, start, sudut, false);
+        context.arc(center_x, center_y, 250, start, sudut, false);
         context.lineTo(center_x,center_y);
         context.fill();
       }
