@@ -36,7 +36,7 @@ function processData(allRows) {
  }
 
   // count each unique values in category
-  let cat_count = cat.reduce(
+  var cat_count = cat.reduce(
     function(obj, val) {
     obj[val] = ++obj[val] || 1;
     return obj;
@@ -50,14 +50,14 @@ function processData(allRows) {
       }
     });
   // count each unique values in content rating
-  let cr_count = cont_rating.reduce(
+  var cr_count = cont_rating.reduce(
     function(obj, val) {
     obj[val] = ++obj[val] || 1;
     return obj;
     }, {}
   );
   // count each unique values in rating
-  let rate_count = rating.reduce(
+  var rate_count = rating.reduce(
     function(obj, val) {
     obj[val] = ++obj[val] || 1;
     return obj;
